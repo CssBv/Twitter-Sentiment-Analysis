@@ -5,8 +5,11 @@ import json
 import os
 
 def fetch_tweets(user_id, count): #Se crea método que extrae tweets.
-    #Se indican claves de acceso,  así como un objeto de la clase Twitter del módulo Twitter con la finalidad
-    #de poder accesar a la API de Twitter.
+    
+    """Se indican claves de acceso,  así como un objeto de la clase Twitter del módulo Twitter con la finalidad
+    #de poder accesar a la API de Twitter. Con el módulo OS se importan los tokens previamente establecidos como variables de entorno
+    con la finalidad de tener más seguridad. """
+    
     consumer_key = os.environ.get('consumer_key')
     consumer_secret = os.environ.get('consumer_secret')
     token = os.environ.get('token')
