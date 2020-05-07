@@ -43,9 +43,13 @@ def get_tweets(): #Método de obtención de tuits.
     if (len(response["errors"]) > 0):
         return response
 
-    # Recupera count tweets para user_id de Twitter y lo almacena en variable tweets. 
-    tweets = fetch_tweets(user_id, count)   
-    classified_tweets = tweet_classifier.classify(tweets)
+    try:
+        # Recupera count tweets para user_id de Twitter y lo almacena en variable tweets. 
+        tweets = fetch_tweets(user_id, count) 
+        classified_tweets = tweet_classifier.classify(tweets)
+    except Exception as err:
+        response['errors'].append('An error has occured!')
+        return jsonify(response)
     negative_tweets = []
     for i in range(0,len(classified_tweets)):
         if(classified_tweets[i] == 1):
@@ -57,4 +61,4 @@ def get_tweets(): #Método de obtención de tuits.
     return jsonify(response) #Se Jsonifican tweets.
    
 app.run(host="192.168.15.2", port="5000") #Corre aplicacion
-
+            

@@ -1,4 +1,4 @@
-#Tue May 05 18:22:53 CDT 2020
+#Thu May 07 16:51:20 CDT 2020
 base.0=/Users/littlebigendian/Desktop/Copia de ExpertSystem/Client/build/app/intermediates/dex/debug/mergeDexDebug/out/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

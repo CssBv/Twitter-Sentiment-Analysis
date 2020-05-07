@@ -1,4 +1,0 @@
-#Wed May 06 13:23:38 CDT 2020
-base.0=/Users/littlebigendian/Desktop/Copia de ExpertSystem/Client/build/app/intermediates/transforms/r8/release/0/classes.dex
-path.0=classes.dex
-renamed.0=classes.dex
